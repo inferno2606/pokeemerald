@@ -1,0 +1,9 @@
+OldaleTown_House1_MapScripts::
+	.byte 0
+
+OldaleTown_House1_EventScript_Woman::
+	msgbox OldaleTown_House1_Text_Woman, MSGBOX_NPC
+	end
+
+OldaleTown_House1_Text_Woman:
+	.string "Stay awhile, I'll cook you a meal!$'"
