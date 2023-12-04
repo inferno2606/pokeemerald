@@ -161,7 +161,7 @@ JSONPROC := tools/jsonproc/jsonproc$(EXE)
 PATCHELF := tools/patchelf/patchelf$(EXE)
 ROMTEST ?= $(shell { command -v mgba-rom-test || command -v tools/mgba/mgba-rom-test$(EXE); } 2>/dev/null)
 ROMTESTHYDRA := tools/mgba-rom-test-hydra/mgba-rom-test-hydra$(EXE)
-SCRIPT := tools/poryscript/poryscript$(EXE)
+SCRIPT := tools/poryscript/poryscript.exe$(EXE)
 
 PERL := perl
 
