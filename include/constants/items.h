@@ -835,6 +835,7 @@
 #define ITEM_FAME_CHECKER 725
 #define ITEM_TEACHY_TV 726
 #define ITEM_SAW 799
+#define ITEM_PICKAXE 800
 
 // Story Key Items
 #define ITEM_SS_TICKET 727
@@ -915,7 +916,7 @@
 #define ITEM_PEAT_BLOCK 797
 #define ITEM_BERSERK_GENE 798
 
-#define ITEMS_COUNT 800
+#define ITEMS_COUNT 801
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

@@ -8675,6 +8675,17 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Saw,
     },
 
+    [ITEM_PICKAXE] = 
+    {
+        .name = _("Pickaxe"),
+        .price = 0,
+        .description = sPickaxeDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Pickaxe,
+    },
+
     [ITEM_OLD_ROD] =
     {
         .name = _("Old Rod"),

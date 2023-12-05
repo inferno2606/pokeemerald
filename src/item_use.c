@@ -58,6 +58,7 @@ static void CheckForHiddenItemsInMapConnection(u8);
 static void Task_OpenRegisteredPokeblockCase(u8);
 static void ItemUseOnFieldCB_Bike(u8);
 static void ItemUseOnFieldCB_Saw(u8);
+static void ItemUseOnFieldCB_Pickaxe(u8);
 static void ItemUseOnFieldCB_Rod(u8);
 static void ItemUseOnFieldCB_Itemfinder(u8);
 static void ItemUseOnFieldCB_Berry(u8);
@@ -274,10 +275,29 @@ void ItemUseOutOfBattle_Saw(u8 taskId)
         DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 }
 
+void ItemUseOutOfBattle_Pickaxe(u8 taskId)
+{
+    if (SetUpFieldMove_RockSmash())
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_Pickaxe;
+        ItemUseOnFieldCB_Pickaxe(taskId);
+    }
+
+    else
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId], tUsingRegisteredKeyItem);
+}
+
 static void ItemUseOnFieldCB_Saw(u8 taskId)
 {
 	LockPlayerFieldControls();
     ScriptContext_SetupScript(EventScript_UseCut);
+    DestroyTask(taskId);
+}
+
+static void ItemUseOnFieldCB_Pickaxe(u8 taskID)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(EventScript_UseRockSmash);
     DestroyTask(taskId);
 }
 
