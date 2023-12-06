@@ -284,7 +284,7 @@ void ItemUseOutOfBattle_Pickaxe(u8 taskId)
     }
 
     else
-        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId], tUsingRegisteredKeyItem);
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 }
 
 static void ItemUseOnFieldCB_Saw(u8 taskId)
