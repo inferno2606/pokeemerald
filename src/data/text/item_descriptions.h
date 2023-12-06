@@ -3574,6 +3574,10 @@ static const u8 sSawDesc[] = _(
     "A saw capable of\n"
     "cutting down trees.");
 
+static const u8 sPickaxeDesc[] = _(
+    "A pickaxe capable of\n"
+    "breaking rocks.");
+
 static const u8 sOldRodDesc[] = _(
     "Use by any body of\n"
     "water to fish for\n"
