@@ -7771,10 +7771,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_SKITTY] =
     {
         .baseHP        = 50,
-        .baseAttack    = 45,
+        .baseAttack    = 40,
         .baseDefense   = 45,
         .baseSpeed     = 50,
-        .baseSpAttack  = 35,
+        .baseSpAttack  = 45,
         .baseSpDefense = 35,
         .types = { TYPE_LITTLE, TYPE_NORMAL, TYPE_NORMAL},
         .catchRate = 255,
@@ -7793,9 +7793,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_DELCATTY] =
     {
         .baseHP        = 70,
-        .baseAttack    = 65,
+        .baseAttack    = 45,
         .baseDefense   = 65,
-        .baseSpAttack  = 55,
+        .baseSpAttack  = 80,
         .baseSpDefense = 55,
         #if P_UPDATED_STATS >= GEN_7
             .baseSpeed     = 90,
