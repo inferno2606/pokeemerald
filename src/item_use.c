@@ -77,6 +77,7 @@ static void CB2_OpenPokeblockFromBag(void);
 static void ItemUseOnFieldCB_Honey(u8 taskId);
 static bool32 CannotUseBagBattleItem(u16 itemId);
 static void FieldCallback_CutTree(void);
+static void ItemUseOnFieldCB_Surfboard(u8);
 static void ItemUseOnFieldCB_Axe(u8);
 static void ItemUseOnFieldCB_Hammer(u8);
 
@@ -260,6 +261,24 @@ static void ItemUseOnFieldCB_Bike(u8 taskId)
         GetOnOffBike(PLAYER_AVATAR_FLAG_ACRO_BIKE);
     ScriptUnfreezeObjectEvents();
     UnlockPlayerFieldControls();
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_Surfboard(u8 taskId)
+{
+    if (IsPlayerFacingSurfableFishableWater())
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_Surfboard;
+        SetUpItemUseOnFieldCallback(taskId);
+    }
+    else
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
+
+static void ItemUseOnFieldCB_Surfboard(u8 taskId)
+{
+	LockPlayerFieldControls();
+    ScriptContext_SetupScript(EventScript_UseSurf);
     DestroyTask(taskId);
 }
 

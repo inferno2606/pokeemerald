@@ -8664,6 +8664,18 @@ const struct Item gItems[] =
         .secondaryId = ACRO_BIKE,
     },
 
+    [ITEM_SURFBOARD] =
+    {
+        .name = _("SURFBOARD"),
+        .itemId = ITEM_SURFBOARD,
+        .price = 0,
+		.importance = 1,
+        .description = sSurfboardDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Surfboard,
+    },
+
     [ITEM_AXE] = 
     {
         .name = _("AXE"),

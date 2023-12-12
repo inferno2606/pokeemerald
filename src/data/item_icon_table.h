@@ -736,6 +736,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_CATCHING_CHARM] = {gItemIcon_CatchingCharm, gItemIconPalette_CatchingCharm},
     [ITEM_EXP_CHARM] = {gItemIcon_ExpCharm, gItemIconPalette_ExpCharm},
     // HM Items
+    [ITEM_SURFBOARD] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_AXE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
 	[ITEM_HAMMER] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Form-changing Key Items
