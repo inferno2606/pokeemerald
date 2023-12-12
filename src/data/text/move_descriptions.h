@@ -3323,6 +3323,14 @@ static const u8 sShellShockDescription[] = _(
 static const u8 sSparkleSmashDescription[] = _(
     "So cute! Yet deadly...");
 
+static const u8 sHotFistDescription[] = _(
+    "The user hit's the opponent\n"
+    "with a heated fist.");
+
+static const u8 sDustingsDescription[] = _(
+    "The user erases pencil sketches\n"
+    "covering the opponent in graphite.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4179,4 +4187,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_TREASURE_BLAST - 1] = sTreasureBlastDescription,
     [MOVE_SHELL_SHOCK - 1] = sShellShockDescription,
     [MOVE_SPARKLE_SMASH - 1] = sSparkleSmashDescription,
+    [MOVE_HOT_FIST - 1] = sHotFistDescription,
+    [MOVE_DUSTINGS - 1] = sDustingsDescription,
 };

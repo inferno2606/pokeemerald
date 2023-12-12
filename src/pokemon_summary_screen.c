@@ -4032,6 +4032,7 @@ static void SetMonTypeIcons(void)
         else
         {
             SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, TRUE);
+            SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 2, TRUE);
         }
     }
 }

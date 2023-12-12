@@ -57,8 +57,6 @@ static void PlayerFaceHiddenItem(u8);
 static void CheckForHiddenItemsInMapConnection(u8);
 static void Task_OpenRegisteredPokeblockCase(u8);
 static void ItemUseOnFieldCB_Bike(u8);
-static void ItemUseOnFieldCB_Saw(u8);
-static void ItemUseOnFieldCB_Pickaxe(u8);
 static void ItemUseOnFieldCB_Rod(u8);
 static void ItemUseOnFieldCB_Itemfinder(u8);
 static void ItemUseOnFieldCB_Berry(u8);
@@ -79,6 +77,8 @@ static void CB2_OpenPokeblockFromBag(void);
 static void ItemUseOnFieldCB_Honey(u8 taskId);
 static bool32 CannotUseBagBattleItem(u16 itemId);
 static void FieldCallback_CutTree(void);
+static void ItemUseOnFieldCB_Axe(u8);
+static void ItemUseOnFieldCB_Hammer(u8);
 
 // EWRAM variables
 EWRAM_DATA static void(*sItemUseOnFieldCB)(u8 taskId) = NULL;
@@ -263,38 +263,38 @@ static void ItemUseOnFieldCB_Bike(u8 taskId)
     DestroyTask(taskId);
 }
 
-void ItemUseOutOfBattle_Saw(u8 taskId)
+void ItemUseOutOfBattle_Axe(u8 taskId)
 {
     if (SetUpFieldMove_Cut())
     {
-        sItemUseOnFieldCB = ItemUseOnFieldCB_Saw;
-        ItemUseOnFieldCB_Saw(taskId);
+        sItemUseOnFieldCB = ItemUseOnFieldCB_Axe;
+        ItemUseOnFieldCB_Axe(taskId);
     }
 
     else
         DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 }
 
-void ItemUseOutOfBattle_Pickaxe(u8 taskId)
-{
-    if (SetUpFieldMove_RockSmash())
-    {
-        sItemUseOnFieldCB = ItemUseOnFieldCB_Pickaxe;
-        ItemUseOnFieldCB_Pickaxe(taskId);
-    }
-
-    else
-        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
-}
-
-static void ItemUseOnFieldCB_Saw(u8 taskId)
+static void ItemUseOnFieldCB_Axe(u8 taskId)
 {
 	LockPlayerFieldControls();
     ScriptContext_SetupScript(EventScript_UseCut);
     DestroyTask(taskId);
 }
 
-static void ItemUseOnFieldCB_Pickaxe(u8 taskID)
+void ItemUseOutOfBattle_Hammer(u8 taskId)
+{
+    if (SetUpFieldMove_RockSmash())
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_Hammer;
+        ItemUseOnFieldCB_Hammer(taskId);
+    }
+
+    else
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
+
+static void ItemUseOnFieldCB_Hammer(u8 taskId)
 {
     LockPlayerFieldControls();
     ScriptContext_SetupScript(EventScript_UseRockSmash);

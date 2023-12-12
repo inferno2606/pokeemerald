@@ -3570,13 +3570,15 @@ static const u8 sAcroBikeDesc[] = _(
     "capable of jumps\n"
     "and wheelies.");
 
-static const u8 sSawDesc[] = _(
-    "A saw capable of\n"
-    "cutting down trees.");
+static const u8 sAxeDesc[] = _(
+	"A small cutting\n"
+    "instrument best for\n"
+    "clearing bushes.");
 
-static const u8 sPickaxeDesc[] = _(
-    "A pickaxe capable of\n"
-    "breaking rocks.");
+static const u8 sHammerDesc[] = _(
+	"A small rubber\n"
+    "mallet. It may can\n"
+    "smash rocks.");
 
 static const u8 sOldRodDesc[] = _(
     "Use by any body of\n"

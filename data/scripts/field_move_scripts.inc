@@ -1,16 +1,10 @@
 @ Interact with cuttable tree
 EventScript_CutTree::
 	lockall
-	goto_if_unset FLAG_BADGE01_GET, EventScript_CheckTreeCantCut
-	checkpartymove MOVE_CUT
+	checkitem ITEM_AXE, 1
+	compare VAR_RESULT, 0
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckTreeCantCut
-	setfieldeffectargument 0, VAR_RESULT
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
-	buffermovename STR_VAR_2, MOVE_CUT
-	msgbox Text_WantToCut, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, EventScript_CancelCut
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
-	closemessage
+	msgbox Text_PlayerUsedAxe, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
 	waitstate
 	goto EventScript_CutTreeDown
@@ -50,8 +44,8 @@ Text_WantToCut:
 	.string "CUT down!\p"
 	.string "Would you like to CUT it?$"
 
-Text_MonUsedFieldMove:
-	.string "{STR_VAR_1} used {STR_VAR_2}!$"
+Text_PlayerUsedAxe:
+	.string "{PLAYER} used the AXE!$"
 
 Text_CantCut:
 	.string "This tree looks like it can be\n"
@@ -60,16 +54,10 @@ Text_CantCut:
 @ Interact with smashable rock
 EventScript_RockSmash::
 	lockall
-	goto_if_unset FLAG_BADGE03_GET, EventScript_CantSmashRock
-	checkpartymove MOVE_ROCK_SMASH
+	checkitem ITEM_HAMMER, 1
+	compare VAR_RESULT, 0
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
-	setfieldeffectargument 0, VAR_RESULT
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
-	buffermovename STR_VAR_2, MOVE_ROCK_SMASH
-	msgbox Text_WantToSmash, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, EventScript_CancelSmash
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
-	closemessage
+	msgbox Text_PlayerUsedHammer, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_ROCK_SMASH
 	waitstate
 	goto EventScript_SmashRock
@@ -118,8 +106,11 @@ Text_WantToSmash:
 	.string "Would you like to use ROCK SMASH?$"
 
 Text_CantSmash:
-	.string "It's a rugged rock, but a POKéMON\n"
+	.string "It's a rugged rock, but a HAMMER\n"
 	.string "may be able to smash it.$"
+
+Text_PlayerUsedHammer:
+	.string "{PLAYER} used the HAMMER!$"
 
 EventScript_StrengthBoulder::
 	lockall

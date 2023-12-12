@@ -796,6 +796,10 @@
 #define ITEM_CATCHING_CHARM 692
 #define ITEM_EXP_CHARM 693
 
+// HM Items
+#define ITEM_AXE 799
+#define ITEM_HAMMER 800
+
 // Form-changing Key Items
 #define ITEM_ROTOM_CATALOG 694
 #define ITEM_GRACIDEA 695
@@ -834,8 +838,6 @@
 #define ITEM_POKE_FLUTE 724
 #define ITEM_FAME_CHECKER 725
 #define ITEM_TEACHY_TV 726
-#define ITEM_SAW 799
-#define ITEM_PICKAXE 800
 
 // Story Key Items
 #define ITEM_SS_TICKET 727

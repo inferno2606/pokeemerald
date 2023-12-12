@@ -8664,26 +8664,26 @@ const struct Item gItems[] =
         .secondaryId = ACRO_BIKE,
     },
 
-    [ITEM_SAW] = 
+    [ITEM_AXE] = 
     {
-        .name = _("Saw"),
+        .name = _("AXE"),
         .price = 0,
-        .description = sSawDesc,
+        .description = sAxeDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_Saw,
+        .fieldUseFunc = ItemUseOutOfBattle_Axe,
     },
 
-    [ITEM_PICKAXE] = 
+    [ITEM_HAMMER] = 
     {
-        .name = _("Pickaxe"),
+        .name = _("HAMMER"),
         .price = 0,
-        .description = sPickaxeDesc,
+        .description = sHammerDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_Pickaxe,
+        .fieldUseFunc = ItemUseOutOfBattle_Hammer,
     },
 
     [ITEM_OLD_ROD] =

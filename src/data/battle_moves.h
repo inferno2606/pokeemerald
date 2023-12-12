@@ -14073,6 +14073,38 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .makesContact = TRUE,
         .sheerForceBoost = TRUE,
     },
+
+    [MOVE_HOT_FIST] =
+    {
+        .effect = EFFECT_BURN_HIT,
+        .power = 40,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 25,
+        .secondaryEffectChance = 5,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+        .makesContact = TRUE,
+        .punchingMove = TRUE,
+        .sheerForceBoost = TRUE,
+    },
+
+    [MOVE_DUSTINGS] =
+    {
+        .effect = EFFECT_SPEED_DOWN_HIT,
+        .power = 40,
+        .type = TYPE_ART,
+        .accuracy = 100,
+        .pp = 25,
+        .secondaryEffectChance = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+        .sheerForceBoost = TRUE,
+    },
     
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =

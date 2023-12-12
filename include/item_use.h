@@ -3,8 +3,6 @@
 
 void ItemUseOutOfBattle_Mail(u8);
 void ItemUseOutOfBattle_Bike(u8);
-void ItemUseOutOfBattle_Saw(u8);
-void ItemUseOutOfBattle_Pickaxe(u8);
 void ItemUseOutOfBattle_Rod(u8);
 void ItemUseOutOfBattle_Itemfinder(u8);
 void ItemUseOutOfBattle_PokeblockCase(u8);
@@ -39,6 +37,8 @@ void ItemUseInBattle_PartyMenuChooseMove(u8 taskId);
 void Task_UseDigEscapeRopeOnField(u8 taskId);
 u8 CanUseDigOrEscapeRopeOnCurMap(void);
 u8 CheckIfItemIsTMHMOrEvolutionStone(u16 itemId);
+void ItemUseOutOfBattle_Axe(u8);
+void ItemUseOutOfBattle_Hammer(u8);
 
 enum {
     BALL_THROW_UNABLE_TWO_MONS,

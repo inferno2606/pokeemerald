@@ -735,6 +735,9 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_SHINY_CHARM] = {gItemIcon_ShinyCharm, gItemIconPalette_ShinyCharm},
     [ITEM_CATCHING_CHARM] = {gItemIcon_CatchingCharm, gItemIconPalette_CatchingCharm},
     [ITEM_EXP_CHARM] = {gItemIcon_ExpCharm, gItemIconPalette_ExpCharm},
+    // HM Items
+    [ITEM_AXE] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+	[ITEM_HAMMER] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Form-changing Key Items
     [ITEM_ROTOM_CATALOG] = {gItemIcon_RotomCatalog, gItemIconPalette_RotomCatalog},
     [ITEM_GRACIDEA] = {gItemIcon_Gracidea, gItemIconPalette_Gracidea},
@@ -771,8 +774,6 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_POKE_FLUTE] = {gItemIcon_PokeFlute, gItemIconPalette_PokeFlute},
     [ITEM_FAME_CHECKER] = {gItemIcon_FameChecker, gItemIconPalette_FameChecker},
     [ITEM_TEACHY_TV] = {gItemIcon_TeachyTV, gItemIconPalette_TeachyTV},
-    [ITEM_SAW] = {gItemIcon_Saw, gItemIconPalette_Saw},
-    [ITEM_PICKAXE] = {gItemIcon_Saw, gItemIconPalette_Saw},
     // Story Key Items
     [ITEM_SS_TICKET] = {gItemIcon_SSTicket, gItemIconPalette_SSTicket},
     [ITEM_EON_TICKET] = {gItemIcon_EonTicket, gItemIconPalette_EonTicket},

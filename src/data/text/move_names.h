@@ -1682,6 +1682,8 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_TREASURE_BLAST] = _("TreasureBlst"),
     [MOVE_SHELL_SHOCK] = _("Shell Shock"),
     [MOVE_SPARKLE_SMASH] = _("SparkleSmash"),
+    [MOVE_HOT_FIST] = _("Hot Fist"),
+    [MOVE_DUSTINGS] = _("Dustings"),
 };
 #endif
 
