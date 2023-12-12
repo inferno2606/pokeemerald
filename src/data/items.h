@@ -8686,6 +8686,38 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Hammer,
     },
 
+    [ITEM_DIVING_SUIT] =
+    {
+        .name = _("DIVING SUIT"),
+        .price = 0,
+		.importance = 1,
+        .description = sDivingSuitDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_DivingSuit,
+    },
+
+	[ITEM_LANTERN] =
+    {
+        .name = _("LANTERN"),
+        .price = 0,
+		.importance = 1,
+        .description = sLanternDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Lantern,
+    },
+
+	[ITEM_POWER_GLOVE] =
+    {
+        .name = _("POWER GLOVE"),
+        .price = 0,
+		.importance = 1,
+        .description = sPowerGloveDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_PowerGlove,
+    },
     [ITEM_OLD_ROD] =
     {
         .name = _("Old Rod"),

@@ -799,6 +799,12 @@
 // HM Items
 #define ITEM_AXE 799
 #define ITEM_HAMMER 800
+#define ITEM_DIVING_SUIT 801
+#define ITEM_LANTERN 802
+#define ITEM_POWER_GLOVE 803
+#define ITEM_SURFBOARD 804
+
+
 
 // Form-changing Key Items
 #define ITEM_ROTOM_CATALOG 694
@@ -918,7 +924,7 @@
 #define ITEM_PEAT_BLOCK 797
 #define ITEM_BERSERK_GENE 798
 
-#define ITEMS_COUNT 801
+#define ITEMS_COUNT 805
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
