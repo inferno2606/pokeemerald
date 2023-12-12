@@ -114,14 +114,10 @@ Text_PlayerUsedHammer:
 
 EventScript_StrengthBoulder::
 	lockall
-	goto_if_unset FLAG_BADGE04_GET, EventScript_CantStrength
 	goto_if_set FLAG_SYS_USE_STRENGTH, EventScript_CheckActivatedBoulder
-	checkpartymove MOVE_STRENGTH
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantStrength
-	setfieldeffectargument 0, VAR_RESULT
-	msgbox Text_WantToStrength, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, EventScript_CancelStrength
-	closemessage
+	checkitem ITEM_POWER_GLOVE, 1
+	goto_if_eq VAR_RESULT, 0, EventScript_CantStrength
+	msgbox Text_PlayerUsedGlove, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_STRENGTH
 	waitstate
 	goto EventScript_ActivateStrength
@@ -160,10 +156,8 @@ Text_WantToStrength:
 	.string "may be able to push it aside.\p"
 	.string "Would you like to use STRENGTH?$"
 
-Text_MonUsedStrength:
-	.string "{STR_VAR_1} used STRENGTH!\p"
-	.string "{STR_VAR_1}'s STRENGTH made it\n"
-	.string "possible to move boulders around!$"
+Text_PlayerUsedGlove:
+	.string "{PLAYER} used the POWER GLOVE!$"
 
 Text_CantStrength:
 	.string "It's a big boulder, but a POKéMON\n"
@@ -206,39 +200,11 @@ Text_WantToWaterfall:
 Text_MonUsedWaterfall:
 	.string "{STR_VAR_1} used WATERFALL.$"
 
-EventScript_UseDive::
-	lockall
-	checkpartymove MOVE_DIVE
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantDive
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
-	setfieldeffectargument 0, VAR_RESULT
-	setfieldeffectargument 1, 1
-	msgbox Text_WantToDive, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, EventScript_EndDive
-	msgbox Text_MonUsedDive, MSGBOX_DEFAULT
-	dofieldeffect FLDEFF_USE_DIVE
-	goto EventScript_EndDive
-	end
-
-EventScript_CantDive::
-	msgbox Text_CantDive, MSGBOX_DEFAULT
-	releaseall
-	end
-
-EventScript_EndDive::
-	releaseall
-	end
-
 EventScript_UseDiveUnderwater::
 	lockall
-	checkpartymove MOVE_DIVE
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSurface
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
-	setfieldeffectargument 0, VAR_RESULT
-	setfieldeffectargument 1, 1
-	msgbox Text_WantToSurface, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, EventScript_EndSurface
-	msgbox Text_MonUsedDive, MSGBOX_DEFAULT
+	checkitem ITEM_DIVING_SUIT, 1
+	goto_if_eq VAR_RESULT, 0, EventScript_CantSurface
+	msgbox Text_Surfaced, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndSurface
 	end
@@ -248,6 +214,23 @@ EventScript_CantSurface::
 	msgbox Text_CantSurface, MSGBOX_DEFAULT
 	goto EventScript_EndSurface
 	end
+
+EventScript_EndSurface::
+	releaseall
+	end
+
+Text_CantDive:
+	.string "The sea is deep here. A SUIT\n"
+	.string "may be able to go underwater.$"
+
+Text_PlayerUsedDive:
+	.string "{PLAYER} put on the DIVING SUIT!$"
+	
+Text_Surfaced:
+	.string "{PLAYER} surfaced!$"
+
+Text_CantSurface:
+	.string "Light is filtering down from above.$"
 
 EventScript_EndSurface::
 	releaseall
