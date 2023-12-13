@@ -232,10 +232,6 @@ Text_Surfaced:
 Text_CantSurface:
 	.string "Light is filtering down from above.$"
 
-EventScript_EndSurface::
-	releaseall
-	end
-
 EventScript_Headbutt::
 	lockall
 	checkpartymove MOVE_HEADBUTT
@@ -247,12 +243,15 @@ EventScript_Headbutt::
 	msgbox Text_WantToHeadbutt, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_CancelHeadbutt
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
+	msgbox Text_MonUsedHeadbutt, MSGBOX_DEFAULT
 	closemessage
 	dofieldeffect FLDEFF_USE_HEADBUTT
 	waitstate
 	goto EventScript_HeadbuttTree
 	end
+
+Text_MonUsedHeadbutt:
+	.string "Your POKéMON used HEADBUTT!$"
 
 EventScript_CantHeadbuttTree::
 	msgbox Text_CantHeadbuttTree, MSGBOX_DEFAULT
@@ -284,20 +283,9 @@ EventScript_EndHeadbutt:
 	releaseall
 	end
 
-Text_CantDive:
-	.string "The sea is deep here. A POKéMON\n"
-	.string "may be able to go underwater.$"
-
 Text_WantToDive:
 	.string "The sea is deep here.\n"
 	.string "Would you like to use DIVE?$"
-
-Text_MonUsedDive:
-	.string "{STR_VAR_1} used DIVE.$"
-
-Text_CantSurface:
-	.string "Light is filtering down from above.\n"
-	.string "A POKéMON may be able to surface.$"
 
 Text_WantToSurface:
 	.string "Light is filtering down from above.\n"

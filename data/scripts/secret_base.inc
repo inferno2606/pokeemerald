@@ -45,8 +45,6 @@ SecretBase_EventScript_Cave::
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	msgbox SecretBase_Text_IndentUseSecretPower, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SecretBase_EventScript_CancelOnEntrance
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
-	closemessage
 	dofieldeffect FLDEFF_USE_SECRET_POWER_CAVE
 	waitstate
 	goto SecretBase_EventScript_CaveEnter
@@ -75,8 +73,6 @@ SecretBase_EventScript_Tree::
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	msgbox SecretBase_Text_TreeUseSecretPower, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SecretBase_EventScript_CancelOnEntrance
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
-	closemessage
 	dofieldeffect FLDEFF_USE_SECRET_POWER_TREE
 	waitstate
 	goto SecretBase_EventScript_TreeEnter
@@ -105,8 +101,6 @@ SecretBase_EventScript_Shrub::
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	msgbox SecretBase_Text_ClumpUseSecretPower, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SecretBase_EventScript_CancelOnEntrance
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
-	closemessage
 	dofieldeffect FLDEFF_USE_SECRET_POWER_SHRUB
 	waitstate
 	goto SecretBase_EventScript_ShrubEnter
@@ -204,9 +198,6 @@ SecretBase_EventScript_AlreadyHasSecretBase::
 	goto_if_eq VAR_RESULT, NO, SecretBase_EventScript_CancelOnEntrance
 	bufferpartymonnick STR_VAR_1, VAR_0x8004
 	buffermovename STR_VAR_2, MOVE_SECRET_POWER
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
-	closemessage
-	closemessage
 	goto_if_eq VAR_0x8007, SECRET_BASE_RED_CAVE, SecretBase_EventScript_CaveUseSecretPower
 	goto_if_eq VAR_0x8007, SECRET_BASE_BROWN_CAVE, SecretBase_EventScript_CaveUseSecretPower
 	goto_if_eq VAR_0x8007, SECRET_BASE_BLUE_CAVE, SecretBase_EventScript_CaveUseSecretPower

@@ -8667,7 +8667,6 @@ const struct Item gItems[] =
     [ITEM_SURFBOARD] =
     {
         .name = _("SURFBOARD"),
-        .itemId = ITEM_SURFBOARD,
         .price = 0,
 		.importance = 1,
         .description = sSurfboardDesc,

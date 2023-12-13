@@ -52,12 +52,12 @@ Route116_EventScript_DevonEmployee::
 	faceplayer
 	goto_if_set FLAG_MET_DEVON_EMPLOYEE, Route116_EventScript_TryGiveRepeatBallAgain
 	msgbox Route116_Text_ThankYouTokenOfAppreciation, MSGBOX_DEFAULT
-	goto Route116_EventScript_GiveSaw
+	goto Route116_EventScript_GiveAxe
 	end
 
-Route116_EventScript_GiveSaw::
+Route116_EventScript_GiveAxe::
 	setflag FLAG_MET_DEVON_EMPLOYEE
-	giveitem ITEM_SAW
+	giveitem ITEM_AXE
 	goto_if_eq VAR_RESULT, FALSE, Route116_EventScript_NoRoomForRepeatBall
 	msgbox Route116_Text_NewBallAvailableAtMart, MSGBOX_DEFAULT
 	closemessage

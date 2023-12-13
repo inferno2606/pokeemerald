@@ -43,6 +43,8 @@
 #include "constants/item_effects.h"
 #include "constants/items.h"
 #include "constants/songs.h"
+#include "field_control_avatar.h"
+#include "constants/map_types.h"
 
 static void SetUpItemUseCallback(u8);
 static void FieldCB_UseItemOnField(void);
@@ -79,7 +81,11 @@ static bool32 CannotUseBagBattleItem(u16 itemId);
 static void FieldCallback_CutTree(void);
 static void ItemUseOnFieldCB_Surfboard(u8);
 static void ItemUseOnFieldCB_Axe(u8);
-static void ItemUseOnFieldCB_Hammer(u8);
+static void ItemUseOnFieldCB_DivingSuitAboveWater(u8);
+static void ItemUseOnFieldCB_DivingSuitUnderwater(u8);
+static void ItemUseOnFieldCB_Lantern(u8);
+static void ItemUseOnFieldCB_PowerGlove(u8);
+
 
 // EWRAM variables
 EWRAM_DATA static void(*sItemUseOnFieldCB)(u8 taskId) = NULL;
@@ -390,7 +396,6 @@ static void ItemUseOnFieldCB_PowerGlove(u8 taskId)
     DestroyTask(taskId);
 }
 
-#undef tUsingRegisteredKeyItem
 static bool32 CanFish(void)
 {
     s16 x, y;
