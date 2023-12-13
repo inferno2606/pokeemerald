@@ -81,6 +81,7 @@ static bool32 CannotUseBagBattleItem(u16 itemId);
 static void FieldCallback_CutTree(void);
 static void ItemUseOnFieldCB_Surfboard(u8);
 static void ItemUseOnFieldCB_Axe(u8);
+static void ItemUseOnFieldCB_Hammer(u8);
 static void ItemUseOnFieldCB_DivingSuitAboveWater(u8);
 static void ItemUseOnFieldCB_DivingSuitUnderwater(u8);
 static void ItemUseOnFieldCB_Lantern(u8);

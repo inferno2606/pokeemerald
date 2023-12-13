@@ -132,7 +132,7 @@ EventScript_UseStrength::
 
 EventScript_ActivateStrength::
 	setflag FLAG_SYS_USE_STRENGTH
-	msgbox Text_MonUsedStrength, MSGBOX_DEFAULT
+	msgbox Text_PlayerUsedGlove, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -200,6 +200,21 @@ Text_WantToWaterfall:
 Text_MonUsedWaterfall:
 	.string "{STR_VAR_1} used WATERFALL.$"
 
+EventScript_DiveSpot::
+	lockall
+	checkitem ITEM_DIVING_SUIT, 1
+	goto_if_eq VAR_RESULT, 0, EventScript_CantDive
+	msgbox Text_PlayerUsedDive, MSGBOX_DEFAULT
+	dofieldeffect FLDEFF_USE_DIVE
+	goto EventScript_EndDive
+	end
+
+EventScript_UseDive::
+	lockall
+	dofieldeffect FLDEFF_USE_DIVE
+	goto EventScript_EndDive
+	end
+
 EventScript_UseDiveUnderwater::
 	lockall
 	checkitem ITEM_DIVING_SUIT, 1
@@ -222,6 +237,15 @@ EventScript_EndSurface::
 Text_CantDive:
 	.string "The sea is deep here. A SUIT\n"
 	.string "may be able to go underwater.$"
+
+EventScript_CantDive::
+	msgbox Text_CantDive, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EventScript_EndDive::
+	releaseall
+	end
 
 Text_PlayerUsedDive:
 	.string "{PLAYER} put on the DIVING SUIT!$"
