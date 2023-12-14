@@ -3225,7 +3225,7 @@ static const struct TrainerMon sParty_Viola[] = {
     .species = SPECIES_DUSTOX,
     .heldItem = ITEM_BLACK_SLUDGE,
     .moves = {MOVE_BUG_BITE, MOVE_DUSTINGS, MOVE_POISON_STING, MOVE_HARDEN}
-    }
+    },
     {
     .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
     .lvl = 13,

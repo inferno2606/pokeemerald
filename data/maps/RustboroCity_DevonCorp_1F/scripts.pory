@@ -157,12 +157,12 @@ script RustboroCity_DevonCorp_1F_EventScript_ViolaBattle {
 script RustboroCity_DevonCorp_1F_EventScript_ViolaDefeated {
 	msgbox(Viola_Defeated_Text, MSGBOX_DEFAULT)
 	waitmessage
-	goto(RustboroCity_DevonCorp_1F_EventScript_GiveTM)
+	goto(RustboroCity_DevonCorp_1F_EventScript_GiveBugBite)
 	end
 }
 
 script RustboroCity_DevonCorp_1F_EventScript_GiveBugBite {
-	giveitem(ITEM_TM_BUG_BITE)
+	giveitem(ITEM_TM51)
 	release
 	end
 }
