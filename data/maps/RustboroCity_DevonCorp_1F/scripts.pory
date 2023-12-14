@@ -146,3 +146,43 @@ RustboroCity_DevonCorp_1F_Text_ProductDisplay:
 	.string "POKé BALLS and POKéNAV systems.”$"
 
 `
+
+script RustboroCity_DevonCorp_1F_EventScript_ViolaBattle {
+	trainerbattle_single(TRAINER_VIOLA, Viola_Intro, Viola_Outro, RustboroCity_DevonCorp_1F_EventScript_ViolaDefeated, NO_MUSIC)
+	msgbox(Postbattle_Viola, MSGBOX_DEFAULT)
+	waitmessage
+	end
+}
+
+script RustboroCity_DevonCorp_1F_EventScript_ViolaDefeated {
+	msgbox(Viola_Defeated_Text, MSGBOX_DEFAULT)
+	waitmessage
+	goto(RustboroCity_DevonCorp_1F_EventScript_GiveTM)
+	end
+}
+
+script RustboroCity_DevonCorp_1F_EventScript_GiveBugBite {
+	giveitem(ITEM_TM_BUG_BITE)
+	release
+	end
+}
+
+text Viola_Defeated_Text{
+	"I'm impressed,\n"
+	"You're quite strong!\n"
+	"Here's a little something."
+}
+
+text Viola_Intro {
+	"I came all the way from Kalos\l"
+	"looking for some strong trainers.\n"
+	"Do you want to battle?"
+}
+
+text Viola_Outro {
+	"Wow you're strong!"
+}
+
+text Postbattle_Viola {
+	"You should come to Kalos!"
+}

@@ -345,6 +345,8 @@ const u8 gTypeNames[NUMBER_OF_MON_TYPES][TYPE_NAME_LENGTH + 1] =
     [TYPE_ROYAL] = _("Royal"),
     [TYPE_SPACE] = _("Space"),
     [TYPE_STEALTH] = _("Stlth"),
+    [TYPE_SOUND] = _("Sound"),
+    [TYPE_MAGIC] = _("Magic"),
 };
 
 // This is a factor in how much money you get for beating a trainer.

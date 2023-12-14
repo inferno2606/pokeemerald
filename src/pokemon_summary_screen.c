@@ -964,6 +964,16 @@ static const union AnimCmd sSpriteAnim_TypeStealth[] = {
     ANIMCMD_END
 };
 
+static const union AnimCmd sSpriteAnim_TypeSound[] = {
+    ANIMCMD_FRAME(TYPE_SOUND * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sSpriteAnim_TypeMagic[] = {
+    ANIMCMD_FRAME(TYPE_MAGIC * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
+
 static const union AnimCmd sSpriteAnim_CategoryCool[] = {
     ANIMCMD_FRAME((CONTEST_CATEGORY_COOL + NUMBER_OF_MON_TYPES) * 8, 0, FALSE, FALSE),
     ANIMCMD_END
@@ -1019,6 +1029,8 @@ static const union AnimCmd *const sSpriteAnimTable_MoveTypes[NUMBER_OF_MON_TYPES
     sSpriteAnim_TypeRoyal,
     sSpriteAnim_TypeSpace,
     sSpriteAnim_TypeStealth,
+    sSpriteAnim_TypeSound,
+    sSpriteAnim_TypeMagic,
     sSpriteAnim_CategoryCool,
     sSpriteAnim_CategoryBeauty,
     sSpriteAnim_CategoryCute,
@@ -1078,6 +1090,8 @@ static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIE
     [TYPE_ROYAL] = 13,
     [TYPE_SPACE] = 13,
     [TYPE_STEALTH] = 13,
+    [TYPE_SOUND] = 13,
+    [TYPE_MAGIC] = 13,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_COOL] = 13,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_BEAUTY] = 14,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_CUTE] = 14,

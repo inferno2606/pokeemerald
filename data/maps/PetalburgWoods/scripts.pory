@@ -252,16 +252,16 @@ PetalburgWoods_EventScript_Boy2::
 PetalburgWoods_EventScript_Girl::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_MIRACLE_SEED, PetalburgWoods_EventScript_ExplainMiracleSeed
+	goto_if_set FLAG_RECEIVED_LEAF_STONE, PetalburgWoods_EventScript_ExplainLeafStone
 	msgbox PetalburgWoods_Text_TryUsingThisItem, MSGBOX_DEFAULT
-	giveitem ITEM_MIRACLE_SEED
+	giveitem ITEM_LEAF_STONE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_MIRACLE_SEED
+	setflag FLAG_RECEIVED_LEAF_STONE
 	release
 	end
 
-PetalburgWoods_EventScript_ExplainMiracleSeed::
-	msgbox PetalburgWoods_Text_MiracleSeedExplanation, MSGBOX_DEFAULT
+PetalburgWoods_EventScript_ExplainLeafStone::
+	msgbox PetalburgWoods_Text_LeafStoneExplanation, MSGBOX_DEFAULT
 	release
 	end
 
@@ -445,17 +445,14 @@ PetalburgWoods_Text_HiddenItemsExplanation:
 
 PetalburgWoods_Text_TryUsingThisItem:
 	.string "Oh, neat!\n"
-	.string "That's the BADGE from RUSTBORO GYM!\p"
-	.string "You must be a TRAINER.\n"
+	.string "You found me!\p"
+	.string "You must be a TRAINER then.\n"
 	.string "You should try using this item.$"
 
-PetalburgWoods_Text_MiracleSeedExplanation:
-	.string "It's a MIRACLE SEED.\n"
-	.string "If a POKéMON holds that item, its\l"
-	.string "GRASS-type moves become stronger.\p"
-	.string "Besides MIRACLE SEED, I think there are\n"
-	.string "other convenient items for POKéMON\l"
-	.string "to hold.$"
+PetalburgWoods_Text_LeafStoneExplanation:
+	.string "It's a LEAF STONE.\n"
+	.string "If a POKéMON uses that item, it\l"
+	.string "will evolve!$"
 
 PetalburgWoods_Text_TrainerTipsExperience:
 	.string "TRAINER TIPS\p"

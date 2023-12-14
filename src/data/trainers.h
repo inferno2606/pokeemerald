@@ -3180,6 +3180,18 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_Drake),
     },
 
+    [TRAINER_VIOLA] =
+    {
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_BEAUTY,
+        .trainerName = _("VIOLA"),
+        .items = {ITEM_POTION, ITEM_POTION, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .party = TRAINER_PARTY(sParty_Viola),
+    },
+
     [TRAINER_ROXANNE_1] =
     {
         .trainerClass = TRAINER_CLASS_LEADER,

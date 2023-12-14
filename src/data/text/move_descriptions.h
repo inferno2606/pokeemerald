@@ -3331,6 +3331,15 @@ static const u8 sDustingsDescription[] = _(
     "The user erases pencil sketches\n"
     "covering the opponent in graphite.");
 
+static const u8 sPoisonSlapDescription[] = _(
+    "Hurls toxic sludge\n "
+    "in the foe's face.");
+
+static const u8 sBashDescription[] = _(
+    "The user rams into the opponent\n "
+    "with it's hard shell to\n"
+    "attack and defend at the same time.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4189,4 +4198,6 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_SPARKLE_SMASH - 1] = sSparkleSmashDescription,
     [MOVE_HOT_FIST - 1] = sHotFistDescription,
     [MOVE_DUSTINGS - 1] = sDustingsDescription,
+    [MOVE_POISON_SLAP - 1] = sPoisonSlapDescription,
+    [MOVE_BASH - 1] = sBashDescription,
 };

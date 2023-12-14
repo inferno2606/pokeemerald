@@ -2048,6 +2048,8 @@ static const u8 sATypeMove_Table[NUMBER_OF_MON_TYPES][17] =
     [TYPE_ROYAL]    = _("a ROYAL move"),
     [TYPE_SPACE]    = _("a SPACE move"),
     [TYPE_STEALTH]  = _("a STEALTH move"),
+    [TYPE_SOUND]    = _("a SOUND move"),
+    [TYPE_MAGIC]    = _("a MAGIC move"),
 };
 
 const u8 gText_BattleTourney[] = _("BATTLE TOURNEY");

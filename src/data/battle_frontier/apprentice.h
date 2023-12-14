@@ -946,6 +946,8 @@ static const bool8 sValidApprenticeMoves[MOVES_COUNT] =
     [MOVE_SPARKLE_SMASH] = TRUE,
     [MOVE_HOT_FIST] = TRUE,
     [MOVE_DUSTINGS] = TRUE,
+    [MOVE_POISON_SLAP] = TRUE,
+    [MOVE_BASH] = TRUE,
 };
 
 // The possible questions to ask after the initial 3 WHICH MON questions. Retrieved from here and shuffled

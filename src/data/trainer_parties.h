@@ -3204,26 +3204,57 @@ static const struct TrainerMon sParty_Drake[] = {
     }
 };
 
+static const struct TrainerMon sParty_Viola[] = {
+    {
+    .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
+    .lvl = 12,
+    .species = SPECIES_BUTTERFREE,
+    .heldItem = ITEM_BERRY_JUICE,
+    .moves = {MOVE_BUG_BITE, MOVE_CONFUSION, MOVE_DUSTINGS, MOVE_CALM_MIND}
+    },
+    {
+    .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
+    .lvl = 12,
+    .species = SPECIES_BEEDRILL,
+    .heldItem = ITEM_BERRY_JUICE,
+    .moves = {MOVE_BUG_BITE, MOVE_FURY_ATTACK, MOVE_POISON_STING, MOVE_SWORDS_DANCE}
+    },
+    {
+    .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
+    .lvl = 13,
+    .species = SPECIES_DUSTOX,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .moves = {MOVE_BUG_BITE, MOVE_DUSTINGS, MOVE_POISON_STING, MOVE_HARDEN}
+    }
+    {
+    .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
+    .lvl = 13,
+    .species = SPECIES_BEAUTIFLY,
+    .heldItem = ITEM_BERRY_JUICE,
+    .moves = {MOVE_BUG_BITE, MOVE_DUSTINGS, MOVE_ABSORB, MOVE_NASTY_PLOT}
+    }
+};
+
 static const struct TrainerMon sParty_Roxanne1[] = {
     {
     .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
     .lvl = 13,
     .species = SPECIES_ANORITH,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_OCCA_BERRY,
     .moves = {MOVE_BUG_BITE, MOVE_DEFENSE_CURL, MOVE_ROCK_THROW, MOVE_MUMMIFY}
     },
     {
     .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
     .lvl = 12,
     .species = SPECIES_LILEEP,
-    .heldItem = ITEM_ORAN_BERRY,
+    .heldItem = ITEM_OCCA_BERRY,
     .moves = {MOVE_VINE_WHIP, MOVE_DEFENSE_CURL, MOVE_ROCK_THROW, MOVE_MUMMIFY}
     },
     {
     .iv = TRAINER_PARTY_IVS(24, 24, 24, 24, 24, 24),
     .lvl = 15,
     .species = SPECIES_RELICANTH,
-    .heldItem = ITEM_ORAN_BERRY,
+    .heldItem = ITEM_MYSTIC_WATER,
     .moves = {MOVE_ANCIENT_POWER, MOVE_HARDEN, MOVE_DIVE, MOVE_MUMMIFY}
     }
 };

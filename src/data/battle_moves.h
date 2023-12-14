@@ -774,7 +774,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_ATTACK_DOWN,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_ANGY,
         .accuracy = 100,
         .pp = 40,
         .secondaryEffectChance = 0,
@@ -795,7 +795,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         #endif
         .effect = EFFECT_ROAR,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_ANGY,
         .pp = 20,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -812,7 +812,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_SLEEP,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 55,
         .pp = 15,
         .secondaryEffectChance = 0,
@@ -828,7 +828,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_CONFUSE,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 55,
         .pp = 20,
         .secondaryEffectChance = 0,
@@ -844,7 +844,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_SONICBOOM,
         .power = 1,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 90,
         .pp = 20,
         .secondaryEffectChance = 0,
@@ -1770,7 +1770,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_DEFENSE_DOWN_2,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_ANGY,
         .accuracy = 85,
         .pp = 40,
         .secondaryEffectChance = 0,
@@ -2991,7 +2991,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
             .power = 40,
         #endif
         .effect = EFFECT_SNORE,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 30,
@@ -3369,7 +3369,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_PERISH_SONG,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 0,
         .pp = 5,
         .secondaryEffectChance = 0,
@@ -3732,7 +3732,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_HEAL_BELL,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 0,
         .pp = 5,
         .secondaryEffectChance = 0,
@@ -4378,7 +4378,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
             .power = 50,
         #endif
         .effect = EFFECT_UPROAR,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 100,
@@ -5212,7 +5212,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_HIT,
         .power = 90,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -5759,7 +5759,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
             .effect = EFFECT_ATTACK_UP,
         #endif
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 0,
         .pp = 40,
         .secondaryEffectChance = 0,
@@ -7602,7 +7602,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
             .secondaryEffectChance = 31,
         #endif
         .effect = EFFECT_CONFUSE_HIT,
-        .type = TYPE_FLYING,
+        .type = TYPE_SOUND,
         .accuracy = 100,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
@@ -8390,7 +8390,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_ECHOED_VOICE,
         .power = 40,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
@@ -9202,7 +9202,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_RELIC_SONG,
         .power = 75,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 10,
@@ -9335,7 +9335,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_SPECIAL_ATTACK_DOWN_HIT,
         .power = 55,
-        .type = TYPE_DARK,
+        .type = TYPE_ANGY,
         .accuracy = 95,
         .pp = 15,
         .secondaryEffectChance = 100,
@@ -9556,7 +9556,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_NOBLE_ROAR,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 100,
         .pp = 30,
         .secondaryEffectChance = 0,
@@ -9649,7 +9649,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_HIT,
         .power = 40,
-        .type = TYPE_FAIRY,
+        .type = TYPE_SOUND,
         .accuracy = 0,
         .pp = 15,
         .secondaryEffectChance = 0,
@@ -9664,7 +9664,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_PARTING_SHOT,
         .power = 0,
-        .type = TYPE_DARK,
+        .type = TYPE_ANGY,
         .accuracy = 100,
         .pp = 20,
         .secondaryEffectChance = 0,
@@ -9834,7 +9834,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_HIT,
         .power = 140,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -9897,7 +9897,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_SPECIAL_ATTACK_DOWN,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 0,
         .pp = 20,
         .secondaryEffectChance = 0,
@@ -11932,7 +11932,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_HIT,
         .power = 80,
-        .type = TYPE_ELECTRIC,
+        .type = TYPE_CHARGED,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -13874,8 +13874,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .priority = 0,
         .split = SPLIT_STATUS,
         .zMoveEffect = Z_EFFECT_ATK_UP_1,
-        .snatchAffected = TRUE,
-        .soundMove = B_UPDATED_MOVE_FLAGS >= GEN_8,
+        .snatchAffected = TRUE, 
     },
 
     [MOVE_REALISM] =
@@ -14104,6 +14103,36 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .split = SPLIT_SPECIAL,
         .zMoveEffect = Z_EFFECT_NONE,
         .sheerForceBoost = TRUE,
+    },
+
+    [MOVE_POISON_SLAP] =
+    {
+        .effect = EFFECT_POISON_HIT,
+        .power = 40,
+        .type = TYPE_POISON,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+        .sheerForceBoost = TRUE,
+    },
+
+    [MOVE_BASH] =
+    {
+        .power = 40,
+        .accuracy = 100,
+        .effect = EFFECT_HIT,
+        .type = TYPE_BASH,
+        .pp = 35,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+        .makesContact = TRUE,
     },
     
     // Z-Moves

@@ -37,7 +37,9 @@
 #define TYPE_ROYAL            31
 #define TYPE_SPACE            32
 #define TYPE_STEALTH          33
-#define NUMBER_OF_MON_TYPES   34
+#define TYPE_SOUND            34
+#define TYPE_MAGIC            35
+#define NUMBER_OF_MON_TYPES   36
 
 // Pokemon egg groups
 #define EGG_GROUP_NONE          0

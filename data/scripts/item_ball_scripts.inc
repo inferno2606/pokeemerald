@@ -314,8 +314,8 @@ MauvilleCity_EventScript_ItemXSpeed::
 	finditem ITEM_X_SPEED
 	end
 
-RustboroCity_EventScript_ItemXDefend::
-	finditem ITEM_X_DEFENSE
+RustboroCity_EventScript_ItemBlackSludge::
+	finditem ITEM_BLACK_SLUDGE
 	end
 
 LilycoveCity_EventScript_ItemMaxRepel::

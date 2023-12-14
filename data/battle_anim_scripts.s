@@ -875,6 +875,8 @@ gBattleAnims_Moves::
 	.4byte Move_SPARKLE_SMASH
 	.4byte Move_HOT_FIST
 	.4byte Move_DUSTINGS
+	.4byte Move_POISON_SLAP
+	.4byte Move_BASH
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
 	.4byte Move_ALL_OUT_PUMMELING
@@ -18573,6 +18575,35 @@ Move_DUSTINGS:
 	clearmonbg ANIM_DEF_PARTNER
 	delay 0
 	call UnsetBugBg
+	end
+
+Move_POISON_SLAP:
+	loadspritegfx ANIM_TAG_MUD_SAND
+	playsewithpan SE_M_SAND_ATTACK, SOUND_PAN_ATTACKER
+	createsprite gSlideMonToOffsetSpriteTemplate, ANIM_ATTACKER, 2, 0, -10, 0, 0, 3
+	waitforvisualfinish
+	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 2
+	call MudSlapMud
+	call MudSlapMud
+	call MudSlapMud
+	call MudSlapMud
+	call MudSlapMud
+	call MudSlapMud
+	waitforvisualfinish
+	end
+
+Move_BASH:
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 4
+	delay 6
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 2
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
 	end
 
 Move_MEAN_LOOK:

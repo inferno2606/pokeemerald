@@ -3008,6 +3008,24 @@ const struct BardSound gBardSounds_Moves[MOVES_COUNT][6] = {
         NULL_BARD_SOUND,
     },
 
+    [MOVE_POISON_SLAP] = {
+        { .songLengthId =  0 },
+        { .songLengthId = 36 },
+        { .songLengthId = 51 },
+        NULL_BARD_SOUND,
+        NULL_BARD_SOUND,
+        NULL_BARD_SOUND,
+    },
+
+    [MOVE_BASH] = {
+        { .songLengthId =  0 },
+        { .songLengthId = 36 },
+        { .songLengthId = 51 },
+        NULL_BARD_SOUND,
+        NULL_BARD_SOUND,
+        NULL_BARD_SOUND,
+    },
+
 
 };
 
