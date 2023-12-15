@@ -13,61 +13,61 @@ GraniteCave_B1F_SetHoleWarp:
 `
 
 script Artist_Quiche_Battle {
-	trainerbattle_single(TRAINER_QUICHE, Artist1_Intro, Artist1_Outro)
-	msgbox(Artist1_PostBattle, MSGBOX_AUTOCLOSE)
+	trainerbattle_single(TRAINER_QUICHE, Artist_Quiche_Intro, Artist_Quiche_Outro)
+	msgbox(Artist_Quiche_PostBattle, MSGBOX_AUTOCLOSE)
 	waitmessage
-	close
+	end
 }
 
-text Artist1_Intro {
+text Artist_Quiche_Intro {
 	"Behold my beautiful art!"
 }
 
-text Artist1_Outro {
+text Artist_Quiche_Outro {
 	"You impudent scoundrel!"
 }
 
-text Artist1_PostBattle {
+text Artist_Quiche_PostBattle {
 	"Painting, painting, painting..."
 }
 
 script Hiker_Hamlet_Battle {
-	trainerbattle_single(TRAINER_HAMLET, Hiker1_Intro, Hiker1_Outro)
-	msgbox(Hiker1_PostBattle, MSGBOX_AUTOCLOSE)
+	trainerbattle_single(TRAINER_HAMLET, Hiker_Hamlet_Intro, Hiker_Hamlet_Outro)
+	msgbox(Hiker_Hamlet_PostBattle, MSGBOX_AUTOCLOSE)
 	waitmessage
-	close
+	end
 }
 
-text Hiker1_Intro {
+text Hiker_Hamlet_Intro {
 	"Get ready to get rocked!"
 }
 
-text Hiker1_Outro {
+text Hiker_Hamlet_Outro {
 	"What is it the pun?"
 }
 
-text Hiker1_PostBattle {
+text Hiker_Hamlet_PostBattle {
 	"Why do people like shroomish?\n"
 	"Because he's a pretty fun guy!"
 }
 
 script Hiker_Connor_Battle {
-	trainerbattle_single(TRAINER_CONNOR, Hiker2_Intro, Hiker2_Outro)
-	msgbox(Hiker2_PostBattle, MSGBOX_AUTOCLOSE)
+	trainerbattle_single(TRAINER_CONNOR, Hiker_Connor_Intro, Hiker_Connor_Outro)
+	msgbox(Hiker_Connor_PostBattle, MSGBOX_AUTOCLOSE)
 	waitmessage
-	close
+	end
 }
 
-text Hiker2_Intro {
+text Hiker_Connor_Intro {
 	"Look at the beautiful\l"
 	"stalactites!"
 }
 
-text Hiker2_Outro {
+text Hiker_Connor_Outro {
 	"I was too busy looking\l"
 	"At the rocks..."
 }
 
-text Hiker2_PostBattle {
+text Hiker_Connor_PostBattle {
 	"There's fluorite and quartz too!"
 }

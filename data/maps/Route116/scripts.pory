@@ -83,7 +83,7 @@ Route116_EventScript_DevonEmployeeExitEast::
 
 Route116_EventScript_TryGiveRepeatBallAgain::
 	msgbox Route116_Text_TokenOfAppreciation, MSGBOX_DEFAULT
-	goto Route116_EventScript_GiveAxe
+	goto Route116_EventScript_GiveRepeatball
 	end
 
 Route116_EventScript_NoRoomForRepeatBall::

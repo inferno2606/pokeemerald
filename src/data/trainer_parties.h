@@ -11933,7 +11933,7 @@ static const struct TrainerMon sParty_Kyle[] = {
     }
 };
 
-static const struct TrainerMon sParty_TabithaGraniteCave= {
+static const struct TrainerMon sParty_TabithaGraniteCave[] = {
     {
     .lvl = 20,
     .species = SPECIES_NUMEL,
