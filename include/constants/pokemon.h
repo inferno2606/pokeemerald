@@ -39,7 +39,9 @@
 #define TYPE_STEALTH          33
 #define TYPE_SOUND            34
 #define TYPE_MAGIC            35
-#define NUMBER_OF_MON_TYPES   36
+#define TYPE_TYPE             36
+#define TYPE_GUN              37
+#define NUMBER_OF_MON_TYPES   38
 
 // Pokemon egg groups
 #define EGG_GROUP_NONE          0

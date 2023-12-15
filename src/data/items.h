@@ -8666,7 +8666,7 @@ const struct Item gItems[] =
 
     [ITEM_SURFBOARD] =
     {
-        .name = _("SURFBOARD"),
+        .name = _("Surfboard"),
         .price = 0,
 		.importance = 1,
         .description = sSurfboardDesc,
@@ -8677,7 +8677,7 @@ const struct Item gItems[] =
 
     [ITEM_AXE] = 
     {
-        .name = _("AXE"),
+        .name = _("Axe"),
         .price = 0,
         .description = sAxeDesc,
         .importance = 1,
@@ -8688,7 +8688,7 @@ const struct Item gItems[] =
 
     [ITEM_HAMMER] = 
     {
-        .name = _("HAMMER"),
+        .name = _("Hammer"),
         .price = 0,
         .description = sHammerDesc,
         .importance = 1,
@@ -8699,7 +8699,7 @@ const struct Item gItems[] =
 
     [ITEM_DIVING_SUIT] =
     {
-        .name = _("DIVING SUIT"),
+        .name = _("Diving Suit"),
         .price = 0,
 		.importance = 1,
         .description = sDivingSuitDesc,
@@ -8710,7 +8710,7 @@ const struct Item gItems[] =
 
 	[ITEM_LANTERN] =
     {
-        .name = _("LANTERN"),
+        .name = _("Lantern"),
         .price = 0,
 		.importance = 1,
         .description = sLanternDesc,
@@ -8721,7 +8721,7 @@ const struct Item gItems[] =
 
 	[ITEM_POWER_GLOVE] =
     {
-        .name = _("POWER GLOVE"),
+        .name = _("Power Glove"),
         .price = 0,
 		.importance = 1,
         .description = sPowerGloveDesc,

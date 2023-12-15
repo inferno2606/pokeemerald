@@ -1,3 +1,6 @@
+const u32 gTrainerFrontPic_Artist[] = INCBIN_U32("graphics/trainers/front_pics/artist.4bpp.lz");
+const u32 gTrainerPalette_Artist[] = INCBIN_U32("graphics/trainers/front_pics/artist.gbapal.lz");
+
 const u32 gTrainerFrontPic_Hiker[] = INCBIN_U32("graphics/trainers/front_pics/hiker.4bpp.lz");
 const u32 gTrainerPalette_Hiker[] = INCBIN_U32("graphics/trainers/front_pics/hiker.gbapal.lz");
 

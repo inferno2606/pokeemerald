@@ -1,3 +1,7 @@
+static const union AnimCmd *const sAnims_Artist[] ={
+    sAnim_GeneralFrame0,
+};
+
 static const union AnimCmd *const sAnims_Hiker[] ={
     sAnim_GeneralFrame0,
 };
@@ -372,6 +376,7 @@ static const union AnimCmd *const sAnims_RubySapphireMay[] ={
 
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
+    [TRAINER_PIC_ARTIST] = sAnims_Artist,
     [TRAINER_PIC_HIKER] = sAnims_Hiker,
     [TRAINER_PIC_AQUA_GRUNT_M] = sAnims_AquaGruntM,
     [TRAINER_PIC_POKEMON_BREEDER_F] = sAnims_PokemonBreederF,

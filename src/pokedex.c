@@ -1451,6 +1451,8 @@ static const struct SearchOptionText sDexSearchTypeOptions[NUMBER_OF_MON_TYPES +
     {gText_DexEmptyString, gTypeNames[TYPE_STEALTH]},
     {gText_DexEmptyString, gTypeNames[TYPE_SOUND]},
     {gText_DexEmptyString, gTypeNames[TYPE_MAGIC]},
+    {gText_DexEmptyString, gTypeNames[TYPE_TYPE]},
+    {gText_DexEmptyString, gTypeNames[TYPE_GUN]},
 };
 
 static const u8 sPokedexModes[] = {DEX_MODE_HOENN, DEX_MODE_NATIONAL};
@@ -1502,6 +1504,7 @@ static const u8 sDexSearchTypeIds[NUMBER_OF_MON_TYPES] =
     TYPE_STEALTH,
     TYPE_SOUND,
     TYPE_MAGIC,
+    TYPE_TYPE,
 };
 
 // Number pairs are the task data for tracking the cursor pos and scroll offset of each option list

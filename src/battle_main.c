@@ -347,6 +347,8 @@ const u8 gTypeNames[NUMBER_OF_MON_TYPES][TYPE_NAME_LENGTH + 1] =
     [TYPE_STEALTH] = _("Stlth"),
     [TYPE_SOUND] = _("Sound"),
     [TYPE_MAGIC] = _("Magic"),
+    [TYPE_TYPE] = _("Type"),
+    [TYPE_GUN] = _("Gun"),
 };
 
 // This is a factor in how much money you get for beating a trainer.
@@ -407,6 +409,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_HIKER, 10},
     {TRAINER_CLASS_YOUNG_COUPLE, 8},
     {TRAINER_CLASS_WINSTRATE, 10},
+    {TRAINER_CLASS_ARTIST, 10},
     {0xFF, 5}, // Any trainer class not listed above uses this
 };
 

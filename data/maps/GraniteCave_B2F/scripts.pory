@@ -1,5 +1,126 @@
 raw `
 GraniteCave_B2F_MapScripts::
 	.byte 0
-
 `
+
+script HexManiac_Ever_Battle {
+	trainerbattle_single(TRAINER_EVER, HexManiac1_Intro, HexManiac1_Outro)
+	msgbox(HexManiac1_PostBattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	end
+}
+
+text HexManiac1_Intro {
+	"The spirits are calling to me!"
+}
+
+text HexManiac1_Outro {
+	"Ahhhh/n"
+	"They are screaming just like me!"
+}
+
+text HexManiac1_PostBattle {
+	"It might have just been my echo.."
+}
+
+script Hiker_Kyle_Battle {
+	trainerbattle_single(TRAINER_KYLE, Hiker1_Intro, Hiker1_Outro)
+	msgbox(Hiker1_PostBattle, MSGBOX_AUTOCLOSE)
+	waitmessage
+	end
+}
+
+text Hiker1_Intro {
+	"I love exploring!"
+}
+
+text Hiker1_Outro {
+	"Maybe I'll just stick to exploring."
+}
+
+text Hiker1_PostBattle {
+	"Let me know if you find anything\l"
+	"cool."
+}
+
+script GraniteCave_B2F_MagmaAdmin_Tabitha_Trigger0 {
+	if (var(VAR_UNUSED_0x40F7) == 0) {
+		lock
+		msgbox(Tabitha_Stop, MSGBOX_DEFAULT)
+		closemessage
+		applymovement(12, Tabitha_Towards_Player0)
+		waitmovement(0)
+		trainerbattle_single(TRAINER_GRANITECAVE_TABITHA, Tabitha_Looking_For, Tabitha_Outro)
+		msgbox(Tabitha_PostBattle, MSGBOX_DEFAULT)
+		waitmessage
+		applymovement(12, Tabitha_Away_From_Player0)
+		waitmovement(0)
+		setvar(VAR_UNUSED_0x40F7, 1)
+		release
+		end
+	}
+	
+}
+
+script GraniteCave_B2F_MagmaAdmin_Tabitha_Trigger1 {
+	if (var(VAR_UNUSED_0x40F7) == 0) {
+		lock
+		msgbox(Tabitha_Stop, MSGBOX_DEFAULT)
+		closemessage
+		applymovement(12, Tabitha_Towards_Player1)
+		waitmovement(0)
+		msgbox(Tabitha_PostBattle)
+		trainerbattle_single(TRAINER_GRANITECAVE_TABITHA, Tabitha_Looking_For, Tabitha_Outro)
+		msgbox(Tabitha_PostBattle, MSGBOX_DEFAULT)
+		waitmessage
+		applymovement(12, Tabitha_Away_From_Player0)
+		waitmovement(0)
+		setvar(VAR_UNUSED_0x40F7, 1)
+		release
+		end
+	}
+	
+}
+
+text Tabitha_Stop {
+	"Stop right there!"
+}
+
+text Tabitha_Looking_For {
+	"I'm looking for a man named STEVEN STONE.\l"
+	"Have you seen him?\p"
+	"You're looking for him too?\l"
+	"I'll have to fight you then!"
+}
+
+movement Tabitha_Towards_Player0 {
+	walk_left * 6
+}
+
+movement Tabitha_Towards_Player1 {
+	walk_down
+	walk_left * 6
+}
+
+text Tabitha_Outro {
+	"Spoiled brat!"
+}
+
+movement Tabitha_Away_From_Player0 {
+	walk_down
+	walk_left * 7
+	setflag(FLAG_UNUSED_0x020)
+}
+
+movement Tabitha_Away_From_Player1 {
+	walk_up
+	walk_left * 7
+	setflag(FLAG_UNUSED_0x020)
+}
+
+text Tabitha_PostBattle {
+	"Humph!\l"
+	"I can't believe I lost to\l"
+	"a brat like you!\p"
+	"Don't mess with us again!"
+}

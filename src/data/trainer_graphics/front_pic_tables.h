@@ -1,5 +1,6 @@
 const struct MonCoords gTrainerFrontPicCoords[] =
 {
+    [TRAINER_PIC_ARTIST] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_HIKER] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_AQUA_GRUNT_M] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_POKEMON_BREEDER_F] = {.size = 8, .y_offset = 1},
@@ -99,6 +100,7 @@ const struct MonCoords gTrainerFrontPicCoords[] =
 
 const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
 {
+    TRAINER_SPRITE(ARTIST, gTrainerFrontPic_Artist, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(HIKER, gTrainerFrontPic_Hiker, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(AQUA_GRUNT_M, gTrainerFrontPic_AquaGruntM, TRAINER_PIC_SIZE),
     TRAINER_SPRITE(POKEMON_BREEDER_F, gTrainerFrontPic_PokemonBreederF, TRAINER_PIC_SIZE),
@@ -198,6 +200,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
 
 const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
 {
+    TRAINER_PAL(ARTIST, gTrainerPalette_Artist),
     TRAINER_PAL(HIKER, gTrainerPalette_Hiker),
     TRAINER_PAL(AQUA_GRUNT_M, gTrainerPalette_AquaGruntM),
     TRAINER_PAL(POKEMON_BREEDER_F, gTrainerPalette_PokemonBreederF),

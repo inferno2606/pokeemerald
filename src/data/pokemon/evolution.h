@@ -95,8 +95,8 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_TANGELA]               = {{EVO_MOVE, MOVE_ANCIENT_POWER, SPECIES_TANGROWTH}},
 #endif
     [SPECIES_HORSEA]                = {{EVO_LEVEL, 32, SPECIES_SEADRA}},
-    [SPECIES_SEADRA]                = {{EVO_TRADE_ITEM, ITEM_DRAGON_SCALE, SPECIES_KINGDRA},
-                                       {EVO_ITEM, ITEM_DRAGON_SCALE, SPECIES_KINGDRA}},
+    [SPECIES_SEADRA]                = {{EVO_TRADE_ITEM, ITEM_KINGS_ROCK, SPECIES_KINGDRA},
+                                       {EVO_ITEM, ITEM_KINGS_ROCK, SPECIES_KINGDRA}},
     [SPECIES_GOLDEEN]               = {{EVO_LEVEL, 33, SPECIES_SEAKING}},
     [SPECIES_STARYU]                = {{EVO_ITEM, ITEM_WATER_STONE, SPECIES_STARMIE}},
     [SPECIES_SCYTHER]               = {{EVO_TRADE_ITEM, ITEM_METAL_COAT, SPECIES_SCIZOR},

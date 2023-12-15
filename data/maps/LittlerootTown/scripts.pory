@@ -957,3 +957,9 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "Let's go to my LAB.$"
 
 `
+
+script LittlerootTown_EventScript_LittleGirl {
+	msgbox(LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut, MSGBOX_DEFAULT)
+	waitmessage
+	end
+}
