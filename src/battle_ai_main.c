@@ -1090,6 +1090,19 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 score -= 10;
             }
             break;
+        case EFFECT_SPATTACK_ACCURACY_UP:
+            if (aiData->abilities[battlerAtk] != ABILITY_CONTRARY)
+            {
+                if (gBattleMons[battlerAtk].statStages[STAT_SPATK] >= MAX_STAT_STAGE
+                  && (gBattleMons[battlerAtk].statStages[STAT_ACC] >= MAX_STAT_STAGE || !HasMoveWithSplit(battlerAtk, SPLIT_PHYSICAL)))
+                    score -= 10;
+                break;
+            }
+            else
+            {
+                score -= 10;
+            }
+            break;
         case EFFECT_CHARGE:
             if (gStatuses3[battlerAtk] & STATUS3_CHARGED_UP)
                 score -= 20;
@@ -3491,6 +3504,10 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
         break;
     case EFFECT_ATTACK_ACCURACY_UP: // hone claws
         IncreaseStatUpScore(battlerAtk, battlerDef, STAT_ATK, &score);
+        IncreaseStatUpScore(battlerAtk, battlerDef, STAT_ACC, &score);
+        break;
+    case EFFECT_SPATTACK_ACCURACY_UP: // hone claws
+        IncreaseStatUpScore(battlerAtk, battlerDef, STAT_SPATK, &score);
         IncreaseStatUpScore(battlerAtk, battlerDef, STAT_ACC, &score);
         break;
     case EFFECT_GROWTH:

@@ -185,7 +185,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_HIT,
         .power = 55,
-        .type = TYPE_NORMAL,
+        .type = TYPE_WATER,
         .accuracy = 100,
         .pp = 30,
         .secondaryEffectChance = 0,
@@ -742,7 +742,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_DEFENSE_DOWN,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_ANGY,
         .accuracy = 100,
         .pp = 30,
         .secondaryEffectChance = 0,
@@ -757,7 +757,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_FLINCH_HIT,
         .power = 60,
-        .type = TYPE_DARK,
+        .type = TYPE_ANGY,
         .accuracy = 100,
         .pp = 25,
         .secondaryEffectChance = 30,
@@ -4163,7 +4163,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
             .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
         #endif
         .power = 80,
-        .type = TYPE_DARK,
+        .type = TYPE_ANGY,
         .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 20,
@@ -7654,7 +7654,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         .effect = EFFECT_SP_ATTACK_UP_HIT,
         .power = 50,
-        .type = TYPE_ELECTRIC,
+        .type = TYPE_CHARGED,
         .accuracy = 90,
         .pp = 10,
         .secondaryEffectChance = 70,
@@ -14133,6 +14133,104 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .split = SPLIT_PHYSICAL,
         .zMoveEffect = Z_EFFECT_NONE,
         .makesContact = TRUE,
+    },
+
+    [MOVE_BARRELING] =
+    {
+        .power = 0,
+        .accuracy = 100,
+        .effect = EFFECT_SPATTACK_ACCURACY_UP,
+        .type = TYPE_GUN,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_STATUS,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_SLINGSHOT] =
+    {
+        .power = 40,
+        .accuracy = 100,
+        .effect = EFFECT_HIT,
+        .type = TYPE_GUN,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_IRON_FIST] =
+    {
+        .power = 40,
+        .accuracy = 100,
+        .effect = EFFECT_HIT,
+        .type = TYPE_STEEL,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_PHYSICAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_CURSED_ENERGY] =
+    {
+        .power = 40,
+        .accuracy = 100,
+        .effect = EFFECT_HIT,
+        .type = TYPE_YOKAI,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_BLOODRIGHT] =
+    {
+        .power = 60,
+        .accuracy = 100,
+        .effect = EFFECT_HIT,
+        .type = TYPE_ROYAL,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_PROTOCOL_1] =
+    {
+        .power = 60,
+        .accuracy = 100,
+        .effect = EFFECT_HIT,
+        .type = TYPE_CHARGED,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+    },
+
+    [MOVE_MANA_RELEASE] =
+    {
+        .power = 40,
+        .accuracy = 100,
+        .effect = EFFECT_HIT,
+        .type = TYPE_MAGIC,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
     },
     
     // Z-Moves

@@ -3340,6 +3340,32 @@ static const u8 sBashDescription[] = _(
     "with it's hard shell to\n"
     "attack and defend at the same time.");
 
+static const u8 sBarrelingDescription[] = _(
+    "The user attaches attaches a barrel\n"
+    "to themselves to increase their\n"
+    "accuracy and power.");
+
+static const u8 sSlingshotDescription[] = _(
+    "The user shoots out an object at\n"
+    "a speed slightly faster than throwing.");
+
+static const u8 sIronFistMoveDescription[] = _(
+    "The user hardens its fist and\n"
+    "throws a punch.");
+
+static const u8 sCursedEnergyDescription[] = _(
+    "Nah I'd win.");
+
+static const u8 sBloodRightDescription[] = _(
+    "With this treasure I summon...");
+
+static const u8 sProtcol1Description[] = _(
+    "Activate intial offense protocol.");
+
+static const u8 sManaReleaseDescription[] = _(
+    "The most basic magic a user can\n"
+    "output.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4200,4 +4226,11 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_DUSTINGS - 1] = sDustingsDescription,
     [MOVE_POISON_SLAP - 1] = sPoisonSlapDescription,
     [MOVE_BASH - 1] = sBashDescription,
+    [MOVE_BARRELING - 1] = sBarrelingDescription,
+    [MOVE_SLINGSHOT - 1] = sSlingshotDescription,
+    [MOVE_IRON_FIST - 1] = sIronFistMoveDescription,
+    [MOVE_CURSED_ENERGY - 1] = sCursedEnergyDescription,
+    [MOVE_BLOODRIGHT - 1] = sBloodrightDescription,
+    [MOVE_PROTOCOL_1 - 1] = sProtocol1Description,
+    [MOVE_MANA_RELEASE - 1] = sManaReleaseDescription,
 };

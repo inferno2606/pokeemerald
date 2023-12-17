@@ -438,6 +438,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectHit                     @ EFFECT_GIGATON_HAMMER
 	.4byte BattleScript_EffectSaltCure                @ EFFECT_SALT_CURE
 	.4byte BattleScript_EffectAttackSpAtkSpdDown      @ EFFECT_ATK_SPATK_SPD_DOWN
+	.4byte BattleScript_EffectSpAttackAccUp           @ EFFECT_SPATTACK_ACCURACY_UP
 
 BattleScript_EffectSaltCure:
 	call BattleScript_EffectHit_Ret
@@ -2513,6 +2514,14 @@ BattleScript_EffectAttackAccUp:
 	ppreduce
 	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_ATK, MAX_STAT_STAGE, BattleScript_AttackAccUpDoMoveAnim
 	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_ACC, MAX_STAT_STAGE, BattleScript_CantRaiseMultipleStats
+
+BattleScript_EffectSpAttackAccUp:
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifstat BS_ATTACKER, CMP_LESS_THAN, STAT_SPATK, MAX_STAT_STAGE, BattleScript_AttackAccUpDoMoveAnim
+	jumpifstat BS_ATTACKER, CMP_EQUAL, STAT_ACC, MAX_STAT_STAGE, BattleScript_CantRaiseMultipleStats
+
 BattleScript_AttackAccUpDoMoveAnim::
 	attackanimation
 	waitanimation

@@ -23829,6 +23829,7 @@ static const u16 sElgyemTeachableLearnset[] = {
     MOVE_SUBSTITUTE,
     MOVE_SWAGGER,
     MOVE_THUNDER_WAVE,
+    MOVE_SWIFT,
     MOVE_UNAVAILABLE,
 };
 

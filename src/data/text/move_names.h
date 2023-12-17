@@ -1686,6 +1686,13 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_DUSTINGS] = _("Dustings"),
     [MOVE_POISON_SLAP] = _("Psn Slap"),
     [MOVE_BASH] = _("Bash"),
+    [MOVE_BARRELING] = _("Barreling"),
+    [MOVE_SLINGSHOT] = _("Slingshot"),
+    [MOVE_IRON_FIST] = _("Iron Fist"),
+    [MOVE_CURSED_ENERGY] = _("Cursed Enrgy"),
+    [MOVE_BLOODRIGHT] = _("Bloodright"),
+    [MOVE_PROTOCOL_1] = _("Protocol 1"),
+    [MOVE_MANA_RELEASE] = _("Mana Release"),
 };
 #endif
 
