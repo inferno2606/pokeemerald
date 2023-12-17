@@ -3356,10 +3356,10 @@ static const u8 sIronFistMoveDescription[] = _(
 static const u8 sCursedEnergyDescription[] = _(
     "Nah I'd win.");
 
-static const u8 sBloodRightDescription[] = _(
+static const u8 sBloodrightDescription[] = _(
     "With this treasure I summon...");
 
-static const u8 sProtcol1Description[] = _(
+static const u8 sProtocol1Description[] = _(
     "Activate intial offense protocol.");
 
 static const u8 sManaReleaseDescription[] = _(
