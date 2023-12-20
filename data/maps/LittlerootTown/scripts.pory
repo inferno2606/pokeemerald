@@ -963,3 +963,32 @@ script LittlerootTown_EventScript_LittleGirl {
 	waitmessage
 	end
 }
+
+script LittlerootTown_EventScript_GiveRunningShoesTriggerNew {
+	checkplayergender
+	poryswitch(VAR_RESULT) {
+		MALE {
+			LittlerootTown_EventScript_MomNoticePlayerMale
+			LittlerootTown_EventScript_SetHomeDoorCoordsMale
+			msgbox(LittlerootTown_Text_WaitPlayer, MSGBOX_DEFAULT)
+			waitmessage
+			LittlerootTown_EventScript_MomApproachPlayerMale
+			LittlerootTown_EventScript_GiveRunningShoes
+			LittlerootTown_EventScript_MomReturnHomeMale
+			goto LittlerootTown_EventScript_SetReceivedRunningShoes
+			end
+		}
+
+		FEMALE {
+			LittlerootTown_EventScript_MomNoticePlayerFemale
+			LittlerootTown_EventScript_SetHomeDoorCoordsFemale
+			msgbox(LittlerootTown_Text_WaitPlayer, MSGBOX_DEFAULT)
+			waitmessage
+			LittlerootTown_EventScript_MomApproachPlayerFemale
+			LittlerootTown_EventScript_GiveRunningShoes
+			LittlerootTown_EventScript_MomReturnHomeFemale
+			goto LittlerootTown_EventScript_SetReceivedRunningShoes
+			end
+		}
+	}
+}
