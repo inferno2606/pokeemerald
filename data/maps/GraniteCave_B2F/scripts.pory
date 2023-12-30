@@ -51,7 +51,7 @@ script GraniteCave_B2F_MagmaAdmin_Tabitha_Trigger0 {
 		applymovement(12, Tabitha_Towards_Player0)
 		waitmovement(0)
 		trainerbattle_single(TRAINER_GRANITE_CAVE_TABITHA, Tabitha_Looking_For, Tabitha_Outro)
-		msgbox(Tabitha_PostBattle, MSGBOX_DEFAULT)
+		msgbox(Tabitha_PostBattle, MSGBOX_AUTOCLOSE)
 		waitmessage
 		applymovement(12, Tabitha_Away_From_Player0)
 		waitmovement(0)
@@ -70,9 +70,8 @@ script GraniteCave_B2F_MagmaAdmin_Tabitha_Trigger1 {
 		closemessage
 		applymovement(12, Tabitha_Towards_Player1)
 		waitmovement(0)
-		msgbox(Tabitha_PostBattle)
 		trainerbattle_single(TRAINER_GRANITE_CAVE_TABITHA, Tabitha_Looking_For, Tabitha_Outro)
-		msgbox(Tabitha_PostBattle, MSGBOX_DEFAULT)
+		msgbox(Tabitha_PostBattle, MSGBOX_AUTOCLOSE)
 		waitmessage
 		applymovement(12, Tabitha_Away_From_Player0)
 		waitmovement(0)

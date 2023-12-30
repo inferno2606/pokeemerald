@@ -1,8 +1,8 @@
 @ Interact with cuttable tree
 EventScript_CutTree::
 	lockall
-	checkitem ITEM_AXE, 0
-	compare VAR_RESULT, 1
+	checkitem ITEM_AXE, 1
+	compare VAR_RESULT, 0
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckTreeCantCut
 	msgbox Text_PlayerUsedAxe, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
