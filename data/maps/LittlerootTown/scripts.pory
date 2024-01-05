@@ -966,29 +966,29 @@ script LittlerootTown_EventScript_LittleGirl {
 
 script LittlerootTown_EventScript_GiveRunningShoesTriggerNew {
 	checkplayergender
-	poryswitch(VAR_RESULT) {
-		MALE {
-			LittlerootTown_EventScript_MomNoticePlayerMale
-			LittlerootTown_EventScript_SetHomeDoorCoordsMale
-			msgbox(LittlerootTown_Text_WaitPlayer, MSGBOX_DEFAULT)
-			waitmessage
-			LittlerootTown_EventScript_MomApproachPlayerMale
-			LittlerootTown_EventScript_GiveRunningShoes
-			LittlerootTown_EventScript_MomReturnHomeMale
-			goto LittlerootTown_EventScript_SetReceivedRunningShoes
-			end
-		}
+	if (var(VAR_RESULT) == MALE) 
+	{
+		goto(LittlerootTown_EventScript_MomNoticePlayerMale)
+		goto(LittlerootTown_EventScript_SetHomeDoorCoordsMale)
+		msgbox(LittlerootTown_Text_WaitPlayer, MSGBOX_DEFAULT)
+		waitmessage
+		goto(LittlerootTown_EventScript_MomApproachPlayerMale)
+		goto(LittlerootTown_EventScript_GiveRunningShoes)
+		goto(LittlerootTown_EventScript_MomReturnHomeMale)
+		goto(LittlerootTown_EventScript_SetReceivedRunningShoes)
+		end
+	}
 
-		FEMALE {
-			LittlerootTown_EventScript_MomNoticePlayerFemale
-			LittlerootTown_EventScript_SetHomeDoorCoordsFemale
-			msgbox(LittlerootTown_Text_WaitPlayer, MSGBOX_DEFAULT)
-			waitmessage
-			LittlerootTown_EventScript_MomApproachPlayerFemale
-			LittlerootTown_EventScript_GiveRunningShoes
-			LittlerootTown_EventScript_MomReturnHomeFemale
-			goto LittlerootTown_EventScript_SetReceivedRunningShoes
-			end
-		}
+	else 
+	{
+		goto(LittlerootTown_EventScript_MomNoticePlayerFemale)
+		goto(LittlerootTown_EventScript_SetHomeDoorCoordsFemale)
+		msgbox(LittlerootTown_Text_WaitPlayer, MSGBOX_DEFAULT)
+		waitmessage
+		goto(LittlerootTown_EventScript_MomApproachPlayerFemale)
+		goto(LittlerootTown_EventScript_GiveRunningShoes)
+		goto(LittlerootTown_EventScript_MomReturnHomeFemale)
+		goto(LittlerootTown_EventScript_SetReceivedRunningShoes)
+		end
 	}
 }
